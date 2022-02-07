@@ -12,7 +12,6 @@ import jakarta.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
 
-@ApplicationScoped
 @Path("/pets")
 @Produces("application/json")
 @Consumes("application/json")

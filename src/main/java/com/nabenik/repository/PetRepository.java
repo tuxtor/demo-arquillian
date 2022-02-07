@@ -1,7 +1,6 @@
 package com.nabenik.repository;
 
 import com.nabenik.model.Pet;
-import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
@@ -12,7 +11,7 @@ import java.util.List;
 /**
  * JPA repository for the Pet entity.
  */
-@ApplicationScoped
+@RequestScoped
 @Transactional(Transactional.TxType.REQUIRES_NEW)
 public class PetRepository {
 
