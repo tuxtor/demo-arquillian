@@ -31,7 +31,8 @@ public class DemoControllerIT {
     public static WebArchive createDeployment() {
         WebArchive war = ShrinkWrap.create(WebArchive.class)
                 .addClass(HelloService.class)
-                .addPackage(DemoController.class.getPackage());
+                .addClass(DemoController.class)
+                .addClass(JaxRsApplication.class);
         System.out.println(war.toString(true));
         return war;
     }

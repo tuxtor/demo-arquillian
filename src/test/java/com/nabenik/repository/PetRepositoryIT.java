@@ -24,7 +24,10 @@ public class PetRepositoryIT {
                 .addClass(PetRepository.class)
                 .addClass(Pet.class)
                 .addPackage(EntityManagerProducer.class.getPackage())
-                .addAsResource("persistence.xml", "META-INF/persistence.xml");
+                .addAsResource("persistence.xml", "META-INF/persistence.xml")
+                .addAsWebInfResource("glassfish-resources.xml", "glassfish-resources.xml");
+
+
         System.out.println(war.toString(true));
         return war;
     }
